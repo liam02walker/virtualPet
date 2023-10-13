@@ -1,0 +1,374 @@
+/* :root {
+  --main-bg-colour: #bfc7ed;
+  --secondary-bg-colour: #6699cc;
+  --content-bg-colour: #e6c0e9;
+  --main-txt-colour: #f8faf0;
+  --outline-colour: #c9eddc;
+} */
+
+/*  {
+  box-sizing: border-box;
+} */
+
+/* Background: #EBD5EB
+Game Background (DON'T CHANGE):#F8FAF0
+Buttons: #C9EDDC
+Buttons2: #E6C0E9
+Header: #95DBAE 
+Text1: #50769B
+Text2: #2F2F2F
+Text3: #FFF8FE
+Borders: #6699CC */
+
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap");
+
+body {
+  font-family: "Chakra Petch", sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #ebd5eb;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+  top: 0;
+  max-width: 100%;
+  height: 70vh;
+  /* z-index: 1; */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 5px solid white;
+  position: fixed;
+  top: 0;
+  width: 500px;
+  height: 500px;
+  background-color: lightblue;
+  border-radius: 50% 50% 50% 50% / 70% 70% 40% 40%;
+  margin-top: 10px;
+  /* animation: stop 2s linear infinite; */
+}
+
+/* h2,
+h3 {
+  text-align: center;
+  color: white;
+} */
+
+.nameBox {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  max-width: fit-content;
+  max-height: 70px;
+  background-color: #95dbae;
+  border: solid 2px white;
+  margin-top: 30px;
+  padding: 5px 15px;
+}
+
+.gameSpace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  background-color: #f8faf0;
+  margin-top: 50px;
+  border: 3px solid grey;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
+
+#gameplay-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 25vh;
+  padding: 10px;
+  background-color: #fff8fe;
+}
+
+#buttons {
+  margin-left: 40px;
+  display: flex;
+  height: 90%;
+  width: 30%;
+}
+
+#buttons button {
+  font-family: "Chakra Petch", sans-serif;
+  margin: 30px;
+  width: 50%;
+  font-size: 30px;
+  background-color: #50769b;
+  color: #f8faf0;
+  border: solid 5px #95dbae;
+}
+
+#food-buttons {
+  display: none;
+  position: absolute;
+  top: -65px;
+  left: 200px;
+}
+
+.food-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #99c24d;
+  color: white;
+  border: 3px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: bolder;
+  margin: 3px;
+  border: 3px solid white;
+  color: white;
+  border: 3px solid white;
+  background-color: #99c24d;
+}
+
+.food-button:hover {
+  background-color: #759834;
+  color: white;
+}
+#activity-buttons {
+  display: none;
+  position: absolute;
+  top: -65px;
+  left: 200px;
+}
+.activity-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #99c24d;
+  color: white;
+  border: 3px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: bolder;
+  margin: 3px;
+  border: 3px solid white;
+  color: white;
+  border: 3px solid white;
+  background-color: #41bbd9;
+}
+.activity-button:hover {
+  background-color: #228faa;
+  color: white;
+}
+
+#activity-button:hover {
+  background-color: rgb(40, 73, 110);
+}
+
+#all-levels {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 70%;
+  height: 25vh;
+}
+
+#levels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 50vw;
+  height: 25vh;
+  margin-right: 20px;
+}
+
+.bar {
+  display: flex;
+  width: 70vh;
+  justify-content: flex-end;
+}
+
+.bar h4 {
+  display: flex;
+  margin: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #50769b;
+  width: 10vh;
+  justify-content: flex-end;
+}
+
+.levels-container {
+  display: flex;
+  width: 400px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+
+#hunger-bar {
+  height: 100%;
+  width: 100%;
+  background-color: #ffa500;
+  border-radius: 5px;
+  transition: width 0.5s;
+  max-width: 100%;
+}
+
+#health-bar {
+  height: 100%;
+  width: 100%;
+  background-color: #31b431;
+  border-radius: 5px;
+  transition: width 0.5s;
+  max-width: 100%;
+}
+
+#happy-bar {
+  height: 100%;
+  width: 100%;
+  background-color: #ffd700;
+  border-radius: 5px;
+  transition: width 0.5s;
+  max-width: 100%;
+}
+
+/* @keyframes stop {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 2px 7px 4px rgb(198, 8, 8);
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 2px 7px 4px rgb(7, 134, 113);
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 2px 7px 4px rgb(129, 8, 125);
+  }
+} */
+
+/* here to end is the modal function */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-header {
+  padding: 2px 16px;
+  background-color: #6699cc;
+  color: white;
+}
+.modal-content {
+  background-color: #6699cc;
+  min-height: auto;
+  min-width: auto;
+  margin: auto;
+  padding: 20px;
+  border: 5px solid #000000;
+  width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.3s;
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Gaem Over Section */
+#gameOver {
+  z-index: 500;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#gameOver h3 {
+  color: #fff;
+  font-size: 64px;
+}
+#gameOver button {
+  margin-top: 50px;
+  font-size: 42px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  #gameplay-container {
+    flex-direction: column;
+    height: 35vh;
+  }
+  #gameOver {
+    width: 100vw;
+    height: 100vh;
+  }
+}

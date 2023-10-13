@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/CATLogo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./CSS/index.css" />
+    <script src="./JS/index.js" defer></script>
+    <title>Virtual Pet</title>
+  </head>
+  <body>
+    <header>
+      <img src="./images/CATLogo.png" alt="CAT Logo" />
+      <h1>VIRTUAL PET</h1>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <div class="sidebar">
+          <ul id="navButtons">
+            <li>
+              <p class="arrowB">>
+                <a
+                  href="./index.html"
+                  ><button class="navButton" type="Button">HOME PAGE</button></a
+                >
+              </p>
+            </li>
+            <li>
+              <p class="arrowB">>
+                <a
+                  href="./about.html"
+                  ><button class="navButton" type="Button">ABOUT US</button></a
+                >
+              </p>
+            </li>
+          </ul>
+        </div>
+      <div class="customiseContainer">
+        <div class="leftSideCustomise">
+          <button class="customiseButton" id="customiseAnimal" onclick="showAnimalContainer()">CHOOSE YOUR PET</button>
+          <div id="animalContainer">
+            <button class="animalButton" onclick="changeAnimalCat()">CAT</button>
+            <button class="animalButton" onclick="changeAnimalHusky()">HUSKY</button>
+          </div>
+          <button class="customiseButton" id="customiseName" onclick="showNameContainer()">NAME YOUR PET</button>
+          <div id="nameContainer">
+            <form>
+              <fieldset>
+                <input type="text" placeholder="Type the Pet's name!" name="inputName" maxlength="12" />
+                <button>Submit</button>
+              </fieldset>
+            </form>
+          </div>
+          <button class="customiseButton" id="customiseColour" onclick="showColorContainer()">CHOOSE COLOUR</button>
+          <div id="colorPicker">
+            <form>
+              <fieldset>
+                <label for="inputColor">SELECT YOUR PET'S COLOR!</label>
+                <input id="colorFormInput" type="color" name="inputColor" value="#ff0000" />
+                <button id="colorFormSubmit">Submit</button>
+              </fieldset>
+            </form>
+          </div>
+          <button class="customiseButton" id="customiseFinish" onclick="startButton()">START</button>
+        </div>
+        <div class="rightSideCustomise">
+          <h2 id="nameOfPet">NAME OF PET</h2>
+          <div id="changePetColor">
+            <img id="petImg" src="./images/cats/cat-super1.png" alt="This is your pet" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>&copy; Virtual Pet 2023</footer>
+  </body>
+</html>

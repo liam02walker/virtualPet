@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap");
+
+:root {
+  --main-bg-colour: #bfc7ed;
+  --secondary-bg-colour: #6699cc;
+  --content-bg-colour: #e6c0e9;
+  --main-txt-colour: #f8faf0;
+  --outline-colour: #c9eddc;
+}
+
+/* DEFAULTS */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 20vh;
+  z-index: 100;
+}
+header img {
+  width: 150px;
+  height: 150px;
+  z-index: -5;
+}
+header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(42, 42, 42);
+}
+body {
+  margin: 10px;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: var(--main-bg-colour);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+  height: 80vh;
+}
+fieldset {
+  border: none;
+}
+button {
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+}
+
+/* Sidebar section */
+.wrapper .sidebar {
+  background: var(--secondary-bg-colour);
+  border-right: 2px solid black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 225px;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+#navButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+.navButton {
+  padding: 10px;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: bolder;
+  font-size: 16px;
+  background-color: var(--outline-colour);
+  border-radius: 12px;
+}
+.navButton:hover {
+  background-color: aliceblue;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 5px aliceblue, 0px 0px 10px aliceblue,
+    0px 0px 25px aliceblue, 0px 0px 150px aliceblue;
+  border: none;
+}
+.arrowB {
+  font-size: 48px;
+}
+
+/* CUSTOMISE SECTION */
+.customiseContainer {
+  border: 3px solid black;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px black, 0px 0px 10px black, 0px 0px 25px black,
+    0px 0px 150px black;
+  background-color: var(--secondary-bg-colour);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  width: 40vw;
+  height: 75vh;
+
+  overflow: auto;
+}
+.leftSideCustomise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.rightSideCustomise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-wrap: nowrap;
+
+  margin: 25px;
+}
+.rightSideCustomise img {
+  width: 100%;
+  height: 100%;
+}
+.customiseButton {
+  background-color: var(--outline-colour);
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 15px;
+
+  width: fit-content;
+  align-self: center;
+  padding: 15px;
+  margin: 10px 50px;
+
+  font-size: 28px;
+  font-family: "Chakra Petch", sans-serif;
+  text-align: center;
+  text-wrap: nowrap;
+
+  transition: transform 0.3s, background-color 0.3s;
+}
+.customiseButton:hover {
+  background-color: var(--main-txt-colour);
+}
+.customiseButton:active {
+  transform: scale(0.9);
+}
+#customiseFinish {
+  border: none;
+  box-shadow: 0px 0px 5px #c9eddc, 0px 0px 10px #c9eddc, 0px 0px 25px #c9eddc,
+    0px 0px 50px #c9eddc, 0px 0px 250px #c9eddc;
+}
+#petImg {
+  border: 2px solid black;
+}
+#changePetColor {
+  background-color: rgb(255, 255, 255);
+  width: 150px;
+  height: 150px;
+}
+
+/* Input Buttons */
+#nameContainer {
+  display: none;
+}
+#nameContainer input {
+  height: 5vh;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+#nameContainer button {
+  margin-left: 2px;
+  background-color: black;
+  color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 5vh;
+}
+#colorPicker {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.238);
+  color: white;
+  border-radius: 25px;
+  font-family: "Chakra Petch", sans-serif;
+}
+#colorFormInput {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+#colorFormSubmit {
+  margin-left: 2px;
+  background-color: black;
+  color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 5vh;
+}
+#animalContainer {
+  display: none;
+  position: static;
+  top: 0;
+}
+.animalButton {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid silver;
+
+  display: inline;
+
+  transition: background-color 0.3s, transform 0.3s;
+}
+.animalButton:hover {
+  background-color: rgb(59, 59, 59);
+}
+.animalButton:active {
+  transform: scale(0.8);
+}
+#nameOfPet {
+  font-size: 48px;
+  margin: 0;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 1300px) {
+  /* Reset the header styles */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20vh;
+  }
+  header h1 {
+    display: none;
+  }
+  body {
+    height: 90vh;
+  }
+
+  header img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .leftSideHeader {
+    margin: 0;
+  }
+
+  .leftSideHeader h1 {
+    padding: 20px 0;
+    font-size: 36px;
+  }
+
+  size and spacing */ .rightSideHeader button {
+    height: 75px;
+    width: 75px;
+  }
+  .customiseContainer {
+    flex-direction: column-reverse;
+    width: 80vw;
+    height: 80vh;
+    padding: 2px;
+  }
+
+  .rightSideCustomise {
+    margin-top: 10px;
+  }
+  .customiseButton {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+
+  .wrapper .sidebar {
+    background: #e6c0e9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+  }
+  .wrapper:hover .sidebar:hover {
+    width: 225px;
+  }
+  #navButtons {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
